@@ -126,6 +126,221 @@
             vertical-align: middle;
         }
         
+        /* Стили для формы обратной связи */
+        .feedback-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .feedback-title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #4ecdc4;
+            font-size: 1.8rem;
+        }
+        
+        .feedback-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #4ecdc4;
+            box-shadow: 0 0 0 2px rgba(78, 205, 196, 0.3);
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            grid-column: 1 / -1;
+            justify-self: center;
+            min-width: 200px;
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .form-submit:active {
+            transform: translateY(0);
+        }
+        
+        .form-submit:disabled {
+            background: rgba(255, 255, 255, 0.2);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .form-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            display: none;
+        }
+        
+        .form-message.success {
+            background: rgba(46, 204, 113, 0.2);
+            border: 1px solid rgba(46, 204, 113, 0.5);
+            display: block;
+        }
+        
+        .form-message.error {
+            background: rgba(231, 76, 60, 0.2);
+            border: 1px solid rgba(231, 76, 60, 0.5);
+            display: block;
+        }
+        
+        /* Стили для блока отзывов */
+        .reviews-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .reviews-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ff6b6b;
+            font-size: 1.8rem;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .review-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .review-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .review-thankyou {
+            color: #4ecdc4;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .review-thankyou::before {
+            content: "💫";
+            font-size: 1.2rem;
+        }
+        
+        .review-text {
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 3px solid #4ecdc4;
+        }
+        
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .author-role {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        
+        .no-reviews {
+            text-align: center;
+            padding: 40px;
+            opacity: 0.7;
+            font-style: italic;
+            grid-column: 1 / -1;
+        }
+        
         footer {
             text-align: center;
             margin-top: 50px;
@@ -140,6 +355,18 @@
             }
             
             .networks-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feedback-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .feedback-section, .reviews-section {
+                padding: 20px;
+            }
+            
+            .reviews-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -216,9 +443,171 @@
             </div>
         </div>
         
+        <!-- Блок обратной связи -->
+        <section class="feedback-section">
+            <h2 class="feedback-title">Обратная связь</h2>
+            <form class="feedback-form" id="feedbackForm">
+                <div class="form-group">
+                    <label for="name" class="form-label">Ваше имя</label>
+                    <input type="text" id="name" class="form-input" placeholder="Введите ваше имя" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Ваш email</label>
+                    <input type="email" id="email" class="form-input" placeholder="Введите ваш email" required>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="subject" class="form-label">Тема сообщения</label>
+                    <input type="text" id="subject" class="form-input" placeholder="О чем вы хотите нам сообщить?" required>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message" class="form-label">Сообщение</label>
+                    <textarea id="message" class="form-textarea" placeholder="Опишите ваше предложение, вопрос или замечание..." required></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit" id="submitBtn">Отправить сообщение</button>
+                
+                <div class="form-message" id="formMessage"></div>
+            </form>
+        </section>
+        
+        <!-- Блок отзывов -->
+        <section class="reviews-section">
+            <h2 class="reviews-title">Отзывы наших пользователей</h2>
+            <div class="reviews-grid" id="reviewsContainer">
+                <!-- Отзывы будут добавляться динамически через JavaScript -->
+                <div class="no-reviews" id="noReviewsMessage">
+                    Пока нет отзывов. Будьте первым, кто оставит отзыв!
+                </div>
+            </div>
+        </section>
+        
         <footer>
             <p>© 2023 Каталог нейросетей. Все права на сервисы принадлежат их правообладателям.</p>
         </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const feedbackForm = document.getElementById('feedbackForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+            const reviewsContainer = document.getElementById('reviewsContainer');
+            const noReviewsMessage = document.getElementById('noReviewsMessage');
+            
+            // Массив для хранения отзывов (пустой, без фейковых отзывов)
+            let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            
+            // Функция для отображения отзывов
+            function displayReviews() {
+                if (reviews.length === 0) {
+                    noReviewsMessage.style.display = 'block';
+                    return;
+                }
+                
+                noReviewsMessage.style.display = 'none';
+                reviewsContainer.innerHTML = '';
+                
+                // Показываем последние 6 отзывов
+                const recentReviews = reviews.slice(-6).reverse();
+                
+                recentReviews.forEach(review => {
+                    const reviewCard = document.createElement('div');
+                    reviewCard.className = 'review-card';
+                    
+                    // Создаем аватар на основе инициалов
+                    const initials = getInitials(review.name);
+                    
+                    reviewCard.innerHTML = `
+                        <div class="review-thankyou">Спасибо за ваш отзыв!</div>
+                        <div class="review-text">"${review.message}"</div>
+                        <div class="review-author">
+                            <div class="author-avatar">${initials}</div>
+                            <div class="author-info">
+                                <div class="author-name">${review.name}</div>
+                                <div class="author-role">Пользователь нейросетей</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    reviewsContainer.appendChild(reviewCard);
+                });
+            }
+            
+            // Функция для получения инициалов
+            function getInitials(name) {
+                return name.split(' ')
+                    .map(part => part.charAt(0))
+                    .join('')
+                    .toUpperCase()
+                    .substring(0, 2);
+            }
+            
+            // Обработчик отправки формы
+            feedbackForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Получаем данные формы
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Валидация email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    showMessage('Пожалуйста, введите корректный email адрес', 'error');
+                    return;
+                }
+                
+                // Блокируем кнопку отправки
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Отправка...';
+                
+                // Имитация отправки на сервер
+                setTimeout(() => {
+                    // Сохраняем отзыв
+                    const newReview = {
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message,
+                        date: new Date().toISOString()
+                    };
+                    
+                    reviews.push(newReview);
+                    localStorage.setItem('reviews', JSON.stringify(reviews));
+                    
+                    // Обновляем отображение отзывов
+                    displayReviews();
+                    
+                    // Показываем сообщение об успехе
+                    showMessage('Спасибо! Ваше сообщение отправлено и отзыв добавлен.', 'success');
+                    
+                    // Очищаем форму
+                    feedbackForm.reset();
+                    
+                    // Разблокируем кнопку
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Отправить сообщение';
+                }, 2000);
+            });
+            
+            function showMessage(text, type) {
+                formMessage.textContent = text;
+                formMessage.className = 'form-message ' + type;
+                
+                // Скрываем сообщение через 5 секунд
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }
+            
+            // Инициализация отображения отзывов при загрузке
+            displayReviews();
+        });
+    </script>
 </body>
 </html>
